@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h3{
+    color: #F85A14;
+    font-size: 50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+h5{
+    color: #F85A14;
+    font-size: 30px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main p{
+    background:rgb(231, 224, 219) ;
+    height: auto;
+    width: auto;
+    margin: 20px 50px;
+    font-size: larger;
+    color:#403129 ;
+    font-weight: 700;
+    padding: 60px 60px;
+    border-radius: 10px;
+}
+/*ESTILOS DEL DASHBOARD*/
+ section h3{
+    color: #F85A14;
+    font-size: 50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+section h5{
+    color: #F85A14;
+    font-size: 30px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main section p{
+    background:rgb(231, 224, 219) ;
+    height: auto;
+    width: auto;
+    margin: 20px 50px;
+    font-size: larger;
+    color:#403129 ;
+    font-weight: 700;
+    padding: 60px 60px;
+    border-radius: 10px;
+}
+.buttons2{
+    width: 200px;
+    height: 60px;
+    background: #F85A14;
+    border: none;
+    color: white;
+    font-size: 20px;
+    float: right;
+    border-radius: 6px;
+}

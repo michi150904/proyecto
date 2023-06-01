@@ -1,0 +1,9 @@
+General\Proyecto.class
+model\Usuario\UsuarioVAO.class
+model\Libro\LibroVAO.class
+model\Libro\LibroDAO.class
+controller\Libro.class
+controller\Usuario.class
+model\Conexion.class
+general.class
+model\Usuario\UsarioDAO.class

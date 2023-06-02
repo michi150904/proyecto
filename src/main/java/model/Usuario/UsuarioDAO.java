@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import model.Conexion;
 
-public class UsarioDAO {
+public class UsuarioDAO {
     
     Connection con;
     PreparedStatement ps;
@@ -15,7 +15,7 @@ public class UsarioDAO {
     int r;
 
     public int registrar (UsuarioVAO usuario) throws SQLException{
-        sql="INSERT INTO Usuario(Id_Usuario,Nombre_Usuario,Apellido_Usuario,Correo_Electronico,Clave,Estado) values (?,?,?,?,?,?)";
+        sql="insert into Usuario(Id_Usuario,Nombre_Usuario,Apellido_Usuario,Correo_Electronico,Clave,Estado) values (?,?,?,?,?,?)";
         try {
             con=Conexion.conectar();
             ps=con.prepareStatement(sql);
@@ -24,7 +24,10 @@ public class UsarioDAO {
             ps.setString(3, usuario.getApellido());
             ps.setString(4, usuario.getCorreo_Electronico());
             ps.setString(5, usuario.getClave());
-            ps.setString(6, usuario.getEstado());
+            ps.setBoolean(6, usuario.getEstado());
+            System.out.println(ps);
+            ps.executeUpdate();
+            ps.close();
             System.out.println("se registro correctamente");
         }
         catch (Exception e){

@@ -30,11 +30,13 @@
         <section class="form-login2">
             <form action="usuario" method="post">
                 <h5>FORMULARIO DE REGISTRO</h5>
-                <input class="controls" type="text" name="nombre" value="" placeholder="Nombres" required>
-                <input class="controls" type="text" name="apellido" value="" placeholder="Apellidos" required>
-                <input class="controls" type="text" name="correo" value="" placeholder="Correo Electronico" required>
-                <input class="controls" type="password" name="contraseña" value="" placeholder="Contraseña" required>
-                <input class="buttons" type="submit" name="action" value="abrirForm">
+                <input class="controls" type="text" name="nombre" id="nombre" value="" placeholder="Nombres" required>
+                <input class="controls" type="text" name="apellido" id="apellido" value="" placeholder="Apellidos" required>
+                <input class="controls" type="text" name="correo" id="correo" value="" placeholder="Correo Electronico" required>
+                <input class="controls" type="password" name="contraseña" id="contraseña" value="" placeholder="Contraseña" required>
+                <input type="checkbox" name="estado" id="estado" checked >
+                <label for="estado"> Activo</label>        
+                <input class="buttons" type="submit" name="action" value="add">
             </form>
         </section>
     </main>

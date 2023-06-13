@@ -21,11 +21,6 @@ public class general extends HttpServlet{
             case "login":   
                 req.getRequestDispatcher("views/wattpad/Usuario/login.jsp").forward(req, resp);
                 break;
-            
-            case "registrar":
-                req.getRequestDispatcher("views/wattpad/Usuario/form_login.jsp").forward(req, resp);
-                break;
-            
             case "inicio":
                 req.getRequestDispatcher("views/wattpad/Usuario/index-wat.jsp").forward(req, resp);
                 break;

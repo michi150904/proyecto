@@ -14,11 +14,14 @@ public class Usuario extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     System.out.println ("Entro al doget");
-    String a=req.getParameter("action");
-    switch (a){
-        case "abrirForm":
-            abrirForm(req,resp);
-        break;
+    String action=req.getParameter("action");
+    switch (action){
+        case "abrirFormWat":
+        req.getRequestDispatcher("views/wattpad/Usuario/form_login.jsp").forward(req, resp);
+        System.out.println("se abrio el formulario");
+        System.out.println(action);
+
+    break;
     }
     }
     @Override
@@ -27,20 +30,6 @@ public class Usuario extends HttpServlet {
         String a=req.getParameter("action");
         switch (a){
             case "add":
-                add(req,resp);
-                break;
-        }
-    }
-    private void abrirForm(HttpServletRequest req, HttpServletResponse resp){
-        try {
-            req.getRequestDispatcher("views/wattpad/Usuario/form_login.jsp");
-            System.out.println("se abrio el formulario");
-        } catch (Exception e) {
-            System.out.println("el formulario no se ha abierto"+e.getMessage().toString());        
-        }
-    }
-
-    private void add(HttpServletRequest req, HttpServletResponse resp){
         if (req.getParameter("nombre")!=null){
             u.setNombre(req.getParameter("nombre"));
         }
@@ -65,5 +54,7 @@ public class Usuario extends HttpServlet {
         } catch (Exception e) {
             System.out.println("error en el registro"+e.getMessage().toString());
         }
+        }
     }
 }
+

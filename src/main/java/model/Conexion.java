@@ -2,7 +2,7 @@ package model;
 import java.sql.Connection;
 import java.sql.DriverManager;
 public class Conexion {
-    private static final String bbdd="jdbc:mysql://localhost:3307/redesSociales";
+    private static final String bbdd="jdbc:mysql://localhost:3306/redesSociales";
     private static final String user="root";
     private static final String paswd="";
     private static Connection con;

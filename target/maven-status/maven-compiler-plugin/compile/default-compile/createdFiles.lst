@@ -5,5 +5,5 @@ model\Libro\LibroDAO.class
 controller\Libro.class
 controller\Usuario.class
 model\Conexion.class
+model\Usuario\UsuarioDAO.class
 general.class
-model\Usuario\UsarioDAO.class

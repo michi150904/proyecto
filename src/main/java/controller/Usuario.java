@@ -22,6 +22,17 @@ public class Usuario extends HttpServlet {
         System.out.println(action);
 
     break;
+        case "login":   
+        req.getRequestDispatcher("views/wattpad/Usuario/login.jsp").forward(req, resp);
+    break;
+        case "agr-dash":
+        req.getRequestDispatcher("views/wattpad/Usuario/dashboard.jsp").forward(req, resp);
+    break;
+        case "agr-lib":
+        req.getRequestDispatcher("views/wattpad/Usuario/agregar-libro.jsp").forward(req, resp);
+    break;  
+
+
     }
     }
     @Override

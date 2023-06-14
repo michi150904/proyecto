@@ -26,7 +26,23 @@
     </header>
     <main>
         <h3>Crea un libro</h3>
-        <p>Llena el siguiente formulario para empezar a escribir tu libro</p>
+        <p>Llena el siguiente formulario para empezar a escribir tu libro
+        <form action="usuario">
+            <label for="">Nombre del libro</label>
+            <input type="text" name="nombrelib" id="nombrelib" class="controls" placeholder="Nombre del libro" required>
+            <label for="">Nombre del autor</label>
+            <input type="text" name="nombreaut" id="nombreaut" class="controls" placeholder="Nombre del autor" required>
+            <label for="">Categoría</label>
+            <input type="text" name="categoria" id="categoria" class="controls" placeholder="Categoría" required>
+            <label for="">Género</label>
+            <input type="text" name="genero" id="genero" class="controls" placeholder="Género" required>
+            <label for="">Fecha de publicación</label>
+            <input type="date" name="fechapubli" id="fechapubli" class="controls" placeholder="Fecha de publicación" required>
+            <input type="checkbox" name="estado" id="estado" checked >
+            <label for="estado"> Activo</label>        
+
+        </form>
+    </p>
         <p>Si quieres volver oprime el siguiente botón
             <a href="general?action=agr-dash"><input class="buttons2" type="submit" name="" value="Volver"></a>
         </p>

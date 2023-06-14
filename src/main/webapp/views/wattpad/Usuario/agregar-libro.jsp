@@ -29,7 +29,7 @@
         <h3>Agrega un libro a tu biblioteca</h3>
         <p>Escoge el libro que quieras agregar</p>
         <p>Si quieres volver oprime el siguiente botón
-            <a href="general?action=agr-dash"><input class="buttons2" type="submit" name="" value="Volver"></a>
+            <a href="usuario?action=agr-dash"><input class="buttons2" type="submit" name="" value="Volver"></a>
         </p>
 
     </main>

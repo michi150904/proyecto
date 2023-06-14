@@ -20,7 +20,7 @@
             <a href="" class="enlace"></a>
             <img src="assets\wattpad\img\Wattpad-logo-vector.svg.png" alt="" class="logo">
             <ul>
-                <li><a class="active" href="general?action=login">Iniciar Sesión</a></li>
+                <li><a class="active" href="usuario?action=login">Iniciar Sesión</a></li>
                 <li><a  href="usuario?action=abrirFormWat">Registrate</a></li>
                 <li><a  href="general?action=inicioprin">Inicio</a></li>
             </ul>

@@ -41,6 +41,7 @@ public class Usuario extends HttpServlet {
         String a=req.getParameter("action");
         switch (a){
             case "add":
+
         if (req.getParameter("nombre")!=null){
             u.setNombre(req.getParameter("nombre"));
         }
@@ -50,8 +51,8 @@ public class Usuario extends HttpServlet {
         if(req.getParameter("correo")!=null){
             u.setCorreo_Electronico(req.getParameter("correo"));
         }
-        if(req.getParameter("contraseña")!=null){
-            u.setClave(req.getParameter("contraseña"));
+        if(req.getParameter("clave")!=null){
+            u.setClave(req.getParameter("clave"));
         }
         if(req.getParameter("estado")!=null){
             u.setEstado(true);
@@ -61,10 +62,13 @@ public class Usuario extends HttpServlet {
         }
         try {
             ud.registrar(u);
-            System.out.println("Se registro correctamente");
+            System.out.println("Se registro correctamente usuario");
+            req.getRequestDispatcher("views/wattpad/Usuario/login.jsp").forward(req, resp);
+
         } catch (Exception e) {
-            System.out.println("error en el registro"+e.getMessage().toString());
+            System.out.println("error en el registro usuario"+e.getMessage().toString());
         }
+        break;
         }
     }
 }

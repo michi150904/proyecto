@@ -33,7 +33,7 @@
                 <input class="controls" type="text" name="nombre" id="nombre" value="" placeholder="Nombres" required>
                 <input class="controls" type="text" name="apellido" id="apellido" value="" placeholder="Apellidos" required>
                 <input class="controls" type="text" name="correo" id="correo" value="" placeholder="Correo Electronico" required>
-                <input class="controls" type="password" name="contraseña" id="contraseña" value="" placeholder="Contraseña" required>
+                <input class="controls" type="password" name="clave" id="clave" value="" placeholder="Contraseña" required>
                 <input type="checkbox" name="estado" id="estado" checked >
                 <label for="estado"> Activo</label>        
                 <input class="buttons" type="submit" name="action" value="add">

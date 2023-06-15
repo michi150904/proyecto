@@ -2,8 +2,10 @@ package model.Libro;
 
 public class LibroVAO {
     
+    public LibroVAO(){
+    }
     public LibroVAO(int id_Libro, String nombre_Libro, String autor, String categoria, String genero,
-            String fecha_Publicacion, String estado) {
+            String fecha_Publicacion, boolean estado) {
         Id_Libro = id_Libro;
         Nombre_Libro = nombre_Libro;
         Autor = autor;
@@ -49,10 +51,10 @@ public class LibroVAO {
     public void setFecha_Publicacion(String fecha_Publicacion) {
         Fecha_Publicacion = fecha_Publicacion;
     }
-    public String getEstado() {
+    public boolean getEstado() {
         return Estado;
     }
-    public void setEstado(String estado) {
+    public void setEstado(boolean estado) {
         Estado = estado;
     }
 
@@ -62,6 +64,6 @@ public class LibroVAO {
     private String Categoria;
     private String Genero;
     private String Fecha_Publicacion;
-    private String Estado;
+    private boolean Estado;
 
 }

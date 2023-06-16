@@ -9,6 +9,7 @@ nav{
     background: rgb(231, 224, 219);
     height: 80px;
     width: 100%;
+    padding:0px 90px;
 }
 .enlace{
     position: absolute;
@@ -58,7 +59,9 @@ footer{
     text-align: center;
     text-transform: uppercase;
     height: 20px;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    padding:0px 90px;
+
 }

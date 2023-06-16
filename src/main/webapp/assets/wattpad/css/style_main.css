@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+main{
+    padding:0px 90px;
+
+}
 h3{
     color: #F85A14;
     font-size: 50px;
@@ -20,6 +24,17 @@ h5{
     font-family: Arial, Helvetica, sans-serif;
 }
 main p{
+    background:rgb(231, 224, 219) ;
+    height: auto;
+    width: auto;
+    margin: 20px 50px;
+    font-size: larger;
+    color:#403129 ;
+    font-weight: 700;
+    padding: 60px 60px;
+    border-radius: 10px;
+}
+.section{
     background:rgb(231, 224, 219) ;
     height: auto;
     width: auto;

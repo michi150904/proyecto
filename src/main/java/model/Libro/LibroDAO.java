@@ -55,4 +55,22 @@ public class LibroDAO {
             con.close();
         }
     }
+
+    public void Actualizar (int id,String nom, String nomAu, String cat, String gene, String fecha, Boolean est)throws SQLException{
+        sql="UPDATE `libro` SET `Nombre_Libro`='"+nom+"',`Nombre_Autor`='"+nomAu+"',`Categoria`='"+cat+"',`Genero`='"+gene+"',`Fecha_Publicacion`='"+fecha+"',`Estado_Libro`='"+est+"' WHERE Id_Libro="+id;
+        try{
+            con=Conexion.conectar();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+            ps.close();
+            System.out.println("Se actualizo bien dao");
+
+        }
+        catch(Exception e){
+            System.out.println("error no se actualizo dao");
+        }
+        finally{
+            con.close();
+        }
+    }
 }

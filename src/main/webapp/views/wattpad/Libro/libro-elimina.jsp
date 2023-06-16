@@ -1,6 +1,6 @@
-<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -21,20 +21,22 @@
             <a href="" class="enlace"></a>
             <img src="assets\wattpad\img\Wattpad-logo-vector.svg.png" alt="" class="logo">
             <ul>
-                <li><a class="active" href="general?action=inicio">Cerrar Sesión</a></li>
+                <li><a class="active" href="usuario?action=inicio">Cerrar Sesión</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h3>Eliminar un libro</h3>
         <p>Llena el siguiente formulario para eliminar tu libro</p>
-            <form action="libro" method="post">
+        <section class="section">
+            <form action="libro" method="post" id="formEliminarLib">
                 <label for="">Id del libro</label>
                 <input type="number" class="controls" name="idlibro" id="idlibro">
-                <input type="submit" name="">
+                <input type="submit" class="buttons" name="action" value="Eliminar">
             </form>
+        </section>
         <p>Si quieres volver oprime el siguiente botón
-            <a href="general?action=agr-dash"><input class="buttons2" type="submit" name="" value="Volver"></a>
+            <a href="usuario?action=agr-dash"><input class="buttons2" type="submit" name="" value="Volver"></a>
         </p>
     </main>
     <footer>

@@ -31,6 +31,9 @@ public class Usuario extends HttpServlet {
         case "agr-lib":
         req.getRequestDispatcher("views/wattpad/Usuario/agregar-libro.jsp").forward(req, resp);
     break;  
+        case "inicio":
+        req.getRequestDispatcher("views/wattpad/Usuario/index-wat.jsp").forward(req, resp);
+    break;
 
 
     }

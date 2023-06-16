@@ -1,7 +1,13 @@
 package model.Libro;
 
 public class LibroVAO {
-    
+    private int Id_Libro;
+    private String Nombre_Libro;
+    private String Autor;
+    private String Categoria;
+    private String Genero;
+    private String Fecha_Publicacion;
+    private boolean Estado;
     public LibroVAO(){
     }
     public LibroVAO(int id_Libro, String nombre_Libro, String autor, String categoria, String genero,
@@ -58,12 +64,6 @@ public class LibroVAO {
         Estado = estado;
     }
 
-    private int Id_Libro;
-    private String Nombre_Libro;
-    private String Autor;
-    private String Categoria;
-    private String Genero;
-    private String Fecha_Publicacion;
-    private boolean Estado;
+
 
 }

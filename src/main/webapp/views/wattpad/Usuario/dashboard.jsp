@@ -32,19 +32,24 @@
             <p>En esta sección econtraras las acciones que puedes hacer con tus libros</p>
             <h5>¿QUIERES CREAR UN LIBRO?</h5>
             <p>Si quieres crear un libro oprime el siguiente botón
-            <a href="general?action=lib-cre"><input class="buttons2" type="submit" name="" value="Crear"></a>
+            <a href="libro?action=lib-cre"><input class="buttons2" type="submit" name="" value="Crear"></a>
             </p>
             <h5>¿QUIERES ELIMINAR UN LIBRO?</h5>
             <p>Si quieres eliminar un libro oprime el siguiente botón
-            <a href="general?action=lib-eli"><input class="buttons2" type="submit" name="" value="Eliminar"></a>
+            <a href="libro?action=lib-eli"><input class="buttons2" type="submit" name="" value="Eliminar"></a>
             </p>
+            <h5>¿QUIERES ACTUALIZAR UN LIBRO?</h5>
+            <p>Si quieres actualizar un libro oprime el siguiente botón
+            <a href="libro?action=actu-lib"><input class="buttons2" type="submit" name="" value="Actualizar"></a>
+            </p>
+
         </section>
         <a name="biblioteca"><section></a>
             <h3>BIBLIOTECA</h3>
             <h5>¿QUIERES AGREAGR UN LIBRO A BIBLIOTECA?</h5>
             <p>En esta sección econtraras las acciones que puedes hacer con tu biblioteca</p>
             <p>Si quieres agregar un libro oprime el siguiente botón
-            <a href="general?action=agr-lib"><input class="buttons2" type="submit" name="" value="Agregar"></a>
+            <a href="libro?action=agr-lib"><input class="buttons2" type="submit" name="" value="Agregar"></a>
             </p>
 
         </section>

@@ -20,7 +20,20 @@ public class Libro extends HttpServlet{
                 req.getRequestDispatcher("views/wattpad/Libro/libro-crea.jsp").forward (req, resp);
                 System.out.println("se abrio el formulario de crear libro");
                 break;
-        
+            case "lib-cre":
+                req.getRequestDispatcher("views/wattpad/Libro/libro-crea.jsp").forward(req, resp);
+                break;
+            
+            case "lib-eli":
+                req.getRequestDispatcher("views/wattpad/Libro/libro-elimina.jsp").forward(req, resp);
+                break;
+
+            case "agr-lib":
+                req.getRequestDispatcher("views/wattpad/Usuario/agregar-libro.jsp").forward(req, resp);
+                break;  
+            case "actu-lib":
+                req.getRequestDispatcher("views/wattpad/Libro/libro-modifica.jsp").forward(req, resp);
+                break;
             default:
                 break;
         }
@@ -34,7 +47,10 @@ public class Libro extends HttpServlet{
             case "Crear":
                 crear (req,resp);
             break;
-
+            case "Eliminar":
+                eliminar(req,resp);
+            case "Actualizar":
+                actualizar(req,resp);
             default:
                 break;
         }
@@ -73,6 +89,53 @@ public class Libro extends HttpServlet{
         }
 
         private void eliminar (HttpServletRequest req,HttpServletResponse resp){
-            
+            if(req.getParameter("idlibro")!=null){
+                l.setId_Libro(Integer.parseInt(req.getParameter("idlibro")));
+            }
+            try {
+                ld.Eliminar(l.getId_Libro());
+                req.setAttribute("proceso", true);
+                resp.sendRedirect("libro?action=lib-eli");
+                System.out.println("Se elimino el libro");
+            }
+            catch (Exception e){
+                req.setAttribute("msg","No se pudo eliminar el libro"+e.getMessage().toString());
+                System.out.println("No se pudo eliminar el libro 2"+e.getMessage().toString());            }
+        }
+
+        private void actualizar (HttpServletRequest req, HttpServletResponse resp){
+            System.out.println(req.getParameter("idlib"));
+            if(req.getParameter("idlib")!=null){
+                l.setId_Libro(Integer.parseInt(req.getParameter("idlibro")));
+            }
+            if(req.getParameter("nombrelib")!=null){
+                l.setNombre_Libro(req.getParameter("nombrelib"));
+            }
+            if(req.getParameter("nombreaut")!=null){
+                l.setAutor(req.getParameter("nombreaut"));
+            }
+            if(req.getParameter("categoria")!=null){
+                l.setCategoria(req.getParameter("categoria"));
+            }
+            if(req.getParameter("genero")!=null){
+                l.setGenero(req.getParameter("genero"));
+            }
+            if(req.getParameter("fechapubli")!=null){
+                l.setFecha_Publicacion(req.getParameter("fechapubli"));
+            }
+            if(req.getParameter("estado")!=null){
+                l.setEstado(Boolean.parseBoolean(req.getParameter("estado")));
+            }
+            try{
+                ld.Actualizar(l.getId_Libro(), l.getNombre_Libro(),l.getAutor(),l.getCategoria(),l.getGenero(),l.getFecha_Publicacion(),l.getEstado());
+                req.setAttribute("proceso",true);
+                resp.sendRedirect("libro?action=lib-eli");
+                System.out.println("Informacion actualizada libro");
+            }
+             catch (Exception e) {
+                req.setAttribute("msg", "No se puede actualizar el registro"+e.getMessage().toString());
+                System.out.println("No se puede actualizar el registro"+e.getMessage().toString());
+            }
+
         }
 }

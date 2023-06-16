@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -27,6 +27,7 @@
     <main>
         <h3>Crea un libro</h3>
         <p>Llena el siguiente formulario para empezar a escribir tu libro</p>
+        <section class="section">
         <form action="libro" method="post">
             <label for="">Nombre del libro</label>
             <input type="text" name="nombrelib" id="nombrelib" class="controls" placeholder="Nombre del libro" required>
@@ -41,8 +42,8 @@
             <input type="checkbox" name="estado" id="estado" checked >
             <label for="estado"> Activo</label>       
             <input class="buttons" type="submit" name="action" value="Crear">
- 
         </form>
+        </section>
         <p>Si quieres volver oprime el siguiente botón
             <a href="general?action=agr-dash"><input class="buttons2" type="submit" name="" value="Volver"></a>
         </p>

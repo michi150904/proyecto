@@ -32,40 +32,47 @@ public class Libro extends HttpServlet{
         String a=req.getParameter("action");
         switch (a) {
             case "Crear":
-                if(req.getParameter("nombrelib")!=null){
-                    l.setNombre_Libro(req.getParameter("nombrelib"));
-                }
-                if(req.getParameter("nombreaut")!=null){
-                    l.setAutor(req.getParameter("nombreaut"));
-                }
-                if(req.getParameter("categoria")!=null){
-                    l.setCategoria(req.getParameter("categoria"));
-                }
-                if(req.getParameter("genero")!=null){
-                    l.setGenero(req.getParameter("genero"));
-                }
-                if(req.getParameter("fechapubli")!=null){
-                    l.setFecha_Publicacion(req.getParameter("fechapubli"));
-                }
-                if(req.getParameter("estado")!=null){
-                    l.setEstado(true);
-                }
-                else{
-                    l.setEstado(false);
-                }
-                try{
-                    ld.crear(l);
-                    System.out.println("Se creo correctamente el libro, libro");
-                    req.getRequestDispatcher("views/wattpad/Usuario/dashboard.jsp").forward(req, resp);;
-                }
-                catch (Exception e){
-                    System.out.println("Error, no se pudo crear libro"+e.getMessage().toString());
-                }
-                break;
-        
+                crear (req,resp);
+            break;
+
             default:
                 break;
         }
         }
     
+        private void crear(HttpServletRequest req, HttpServletResponse resp){
+            if(req.getParameter("nombrelib")!=null){
+                l.setNombre_Libro(req.getParameter("nombrelib"));
+            }
+            if(req.getParameter("nombreaut")!=null){
+                l.setAutor(req.getParameter("nombreaut"));
+            }
+            if(req.getParameter("categoria")!=null){
+                l.setCategoria(req.getParameter("categoria"));
+            }
+            if(req.getParameter("genero")!=null){
+                l.setGenero(req.getParameter("genero"));
+            }
+            if(req.getParameter("fechapubli")!=null){
+                l.setFecha_Publicacion(req.getParameter("fechapubli"));
+            }
+            if(req.getParameter("estado")!=null){
+                l.setEstado(true);
+            }
+            else{
+                l.setEstado(false);
+            }
+            try{
+                ld.crear(l);
+                System.out.println("Se creo correctamente el libro, libro");
+                req.getRequestDispatcher("views/wattpad/Usuario/dashboard.jsp").forward(req, resp);;
+            }
+            catch (Exception e){
+                System.out.println("Error, no se pudo crear libro"+e.getMessage().toString());
+            }
+        }
+
+        private void eliminar (HttpServletRequest req,HttpServletResponse resp){
+            
+        }
 }

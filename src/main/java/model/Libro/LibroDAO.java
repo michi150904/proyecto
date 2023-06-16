@@ -38,4 +38,21 @@ public class LibroDAO {
         }
         return r;
     }
+
+    public void Eliminar (int Id_Libro )throws SQLException{
+        sql="delete from libro where Id_Libro="+Id_Libro;
+        try {
+            con=Conexion.conectar();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+            ps.close();
+            System.out.println("Se elimino el libro exitosamente dao");
+        }
+        catch (Exception e){
+            System.out.println("Error al eliminar el libro dao");
+        }
+        finally{
+            con.close();
+        }
+    }
 }

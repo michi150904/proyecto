@@ -1,5 +1,5 @@
-create database redesSociales;
-use redesSociales;
+create database redesSociales2;
+use redesSociales2;
 create table Usuario(
 Id_Usuario tinyint unsigned auto_increment primary key,
 Nombre_Usuario varchar (255) not null,

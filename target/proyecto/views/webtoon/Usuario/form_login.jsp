@@ -20,21 +20,23 @@
             <a href="" class="enlace"></a>
             <img src="assets\webtoon\img\Naver_Line_Webtoon_logo.png" alt="" class="logo">
             <ul>
-                <li><a class="active" href="general?action=loginweb">Iniciar Sesión</a></li>
-                <li><a  href="general?action=formlogweb">Registrate</a></li>
-                <li><a  href="general?action=inicioprin">Inicio</a></li>
+                <li><a class="active" href="usuarioweb?action=loginwe">Iniciar Sesión</a></li>
+                <li><a  href="usuarioweb?action=abrirForm">Registrate</a></li>
+                <li><a  href="general?action=inicio">Inicio</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="form-login2">
-            <form action="general" method="post">
+            <form action="usuarioweb" method="post">
                 <h5>FORMULARIO DE REGISTRO</h5>
                 <input class="controls" type="text" name="nombre" value="" placeholder="Nombres">
                 <input class="controls" type="text" name="apellido" value="" placeholder="Apellidos">
                 <input class="controls" type="text" name="correo" value="" placeholder="Correo Electronico">
-                <input class="controls" type="password" name="contraseña" value="" placeholder="Contraseña">
-                <input class="buttons" type="submit" name="action" value="Registrarweb">
+                <input class="controls" type="password" name="clave" value="" placeholder="Contraseña">
+                <input type="checkbox" name="estado" id="estado" checked >
+                <label for="estado"> Activo</label>        
+                <input class="buttons" type="submit" name="action" value="add">
             </form>
         </section>
     </main>

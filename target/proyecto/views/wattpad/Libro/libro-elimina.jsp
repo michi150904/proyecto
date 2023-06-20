@@ -27,6 +27,26 @@
     </header>
     <main>
         <h3>Eliminar un libro</h3>
+        <h3>Mira primero que libro quieres eliminar</h3>
+        <tr>
+            <th>Id del libro</th>
+            <th>Nombre Autor</th>
+            <th>Nombre Categoría</th>
+            <th>Género del libro</th>
+            <th>Fecha de publicación</th>
+            <th>Estado</th>
+        </tr>
+        <c:forEach var="libro" items="${libros}">
+        <tr>
+            <td>${libro.getId_Libro()}</td>
+            <td>${libro.getNombre_Libro()}</td>
+            <td>${libro.getAutor()}</td>
+            <td>${libro.getCategoria()}</td>
+            <td>${libro.getGenero()}</td>
+            <td>${libro.getFecha_Publicacion()}</td>
+            <td>${libro.getEstado()}</td>
+        </tr>
+    </c:forEach>
         <p>Llena el siguiente formulario para eliminar tu libro</p>
         <section class="section">
             <form action="libro" method="post" id="formEliminarLib">

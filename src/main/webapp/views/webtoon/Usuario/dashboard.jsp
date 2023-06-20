@@ -32,19 +32,15 @@
             <p>En esta sección econtraras las acciones que puedes hacer con tus comics</p>
             <h5>¿QUIERES CREAR UN COMIC?</h5>
             <p>Si quieres crear un comic oprime el siguiente botón
-            <a href="general?action=comiccrea"><input class="buttons2" type="submit" name="" value="Crear"></a>
+            <a href="libroweb?action=lib-cre"><input class="buttons2" type="submit" name="" value="Crear"></a>
             </p>
             <h5>¿QUIERES ELIMINAR UN COMIC?</h5>
             <p>Si quieres eliminar un comic oprime el siguiente botón
-            <a href="general?action=comicelim"><input class="buttons2" type="submit" name="" value="Eliminar"></a>
+            <a href="libroweb?action=lib-eli"><input class="buttons2" type="submit" name="" value="Eliminar"></a>
             </p>
-        </section>
-        <a name="biblioteca"><section></a>
-            <h3>BIBLIOTECA</h3>
-            <h5>¿QUIERES AGREAGR UN COMIC A BIBLIOTECA?</h5>
-            <p>En esta sección econtraras las acciones que puedes hacer con tu biblioteca</p>
-            <p>Si quieres agregar un comic oprime el siguiente botón
-            <a href="general?action=agregcomic"><input class="buttons2" type="submit" name="" value="Agregar"></a>
+            <h5>¿QUIERES ACTUALIZAR UN COMIC?</h5>
+            <p>Si quieres actualizar un comic oprime el siguiente botón
+            <a href="libroweb?action=actu-lib"><input class="buttons2" type="submit" name="" value="Actualizar"></a>
             </p>
 
         </section>

@@ -30,6 +30,18 @@ main p{
     padding: 60px 60px;
     border-radius: 10px;
 }
+.section{
+    background:rgb(231, 224, 219) ;
+    height: auto;
+    width: auto;
+    margin: 20px 50px;
+    font-size: larger;
+    color:#403129 ;
+    font-weight: 700;
+    padding: 60px 60px;
+    border-radius: 10px;
+}
+
 /*ESTILOS DEL DASHBOARD*/
  section h3{
     color: #00D464;

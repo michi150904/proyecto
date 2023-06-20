@@ -26,8 +26,34 @@
     </header>
     <main>
         <h3>Eliminar un comic</h3>
-        <p>Llena el siguiente formulario para eliminar tu comic</p>
-        <p>Si quieres volver oprime el siguiente botón
+        <h3>Mira primero que comic quieres eliminar</h3>
+        <tr>
+            <th>Id del libro</th>
+            <th>Nombre Autor</th>
+            <th>Nombre Categoría</th>
+            <th>Género del libro</th>
+            <th>Fecha de publicación</th>
+            <th>Estado</th>
+        </tr>
+        <c:forEach var="libro" items="${libros}">
+        <tr>
+            <td>${libro.getId_Libro()}</td>
+            <td>${libro.getNombre_Libro()}</td>
+            <td>${libro.getAutor()}</td>
+            <td>${libro.getCategoria()}</td>
+            <td>${libro.getGenero()}</td>
+            <td>${libro.getFecha_Publicacion()}</td>
+            <td>${libro.getEstado()}</td>
+        </tr>
+    </c:forEach>
+        <p>Llena el siguiente formulario para eliminar tu libro</p>
+        <section class="section">
+            <form action="libroweb" method="post" id="formEliminarLib">
+                <label for="">Id del comic</label>
+                <input type="number" class="controls" name="idlibro" id="idlibro">
+                <input type="submit" class="buttons" name="action" value="Eliminar">
+            </form>
+        </section>
             <a href="general?action=dashweb"><input class="buttons2" type="submit" name="" value="Volver"></a>
         </p>
     </main>

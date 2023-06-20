@@ -7,11 +7,11 @@ public class LibroVAO {
     private String Categoria;
     private String Genero;
     private String Fecha_Publicacion;
-    private boolean Estado;
+    private String Estado;
     public LibroVAO(){
     }
     public LibroVAO(int id_Libro, String nombre_Libro, String autor, String categoria, String genero,
-            String fecha_Publicacion, boolean estado) {
+            String fecha_Publicacion, String estado) {
         Id_Libro = id_Libro;
         Nombre_Libro = nombre_Libro;
         Autor = autor;
@@ -57,10 +57,10 @@ public class LibroVAO {
     public void setFecha_Publicacion(String fecha_Publicacion) {
         Fecha_Publicacion = fecha_Publicacion;
     }
-    public boolean getEstado() {
+    public String getEstado() {
         return Estado;
     }
-    public void setEstado(boolean estado) {
+    public void setEstado(String estado) {
         Estado = estado;
     }
 

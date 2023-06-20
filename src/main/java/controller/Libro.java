@@ -1,5 +1,7 @@
 package controller;
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,7 +27,7 @@ public class Libro extends HttpServlet{
                 break;
             
             case "lib-eli":
-                req.getRequestDispatcher("views/wattpad/Libro/libro-elimina.jsp").forward(req, resp);
+                mostrar(req,resp);
                 break;
 
             case "agr-lib":
@@ -38,7 +40,22 @@ public class Libro extends HttpServlet{
                 break;
         }
         }
-
+        private void mostrar (HttpServletRequest req,HttpServletResponse resp){
+            LibroVAO m=new LibroVAO();
+            LibroDAO md=new LibroDAO();
+            try{
+                List<LibroVAO>arrayLibro=md.Listar();
+                for (LibroVAO libroVAO : arrayLibro) {
+                    System.out.println(libroVAO.getId_Libro()+libroVAO.getNombre_Libro());
+                }
+                req.setAttribute("libros",arrayLibro);
+                req.getRequestDispatcher("views/wattpad/Libro/libro-elimina.jsp").forward(req, resp);
+                System.out.println("Datos listados correctamente controlador");
+            }
+            catch(Exception e){
+                System.out.println("No se pudo listar"+e.getMessage().toString());
+            }
+        }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("entro al do post");
@@ -73,10 +90,10 @@ public class Libro extends HttpServlet{
                 l.setFecha_Publicacion(req.getParameter("fechapubli"));
             }
             if(req.getParameter("estado")!=null){
-                l.setEstado(true);
+                l.setEstado("Activo");
             }
             else{
-                l.setEstado(false);
+                l.setEstado("Inactivo");
             }
             try{
                 ld.crear(l);
@@ -106,7 +123,7 @@ public class Libro extends HttpServlet{
         private void actualizar (HttpServletRequest req, HttpServletResponse resp){
             System.out.println(req.getParameter("idlib"));
             if(req.getParameter("idlib")!=null){
-                l.setId_Libro(Integer.parseInt(req.getParameter("idlibro")));
+                l.setId_Libro(Integer.parseInt(req.getParameter("idlib")));
             }
             if(req.getParameter("nombrelib")!=null){
                 l.setNombre_Libro(req.getParameter("nombrelib"));
@@ -124,12 +141,15 @@ public class Libro extends HttpServlet{
                 l.setFecha_Publicacion(req.getParameter("fechapubli"));
             }
             if(req.getParameter("estado")!=null){
-                l.setEstado(Boolean.parseBoolean(req.getParameter("estado")));
+                l.setEstado("Activo");
+            }
+            else{
+                l.setEstado("Inactivo");
             }
             try{
                 ld.Actualizar(l.getId_Libro(), l.getNombre_Libro(),l.getAutor(),l.getCategoria(),l.getGenero(),l.getFecha_Publicacion(),l.getEstado());
                 req.setAttribute("proceso",true);
-                resp.sendRedirect("libro?action=lib-eli");
+                resp.sendRedirect("usuario?action=agr-dash");
                 System.out.println("Informacion actualizada libro");
             }
              catch (Exception e) {

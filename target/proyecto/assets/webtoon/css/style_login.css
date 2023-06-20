@@ -35,7 +35,7 @@ body {
     padding: 11px 10px;
     background: #eee5e5;
     font-size: 14px;
-    color: #ccb2b2;
+    color: #3633339c;
 }
 .controls:focus{
     outline: none;    
@@ -46,8 +46,8 @@ body {
     margin-bottom: 15px;
     padding: 11px 10px;
     font-size: 14px;
-    color: #ccb2b2;
-    background: #8b797262 ;
+    color: #333131;
+    background: #b6a8a230 ;
 }
 .buttons{
     width: 100%;

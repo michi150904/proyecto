@@ -44,15 +44,6 @@
             </p>
 
         </section>
-        <a name="biblioteca"><section></a>
-            <h3>BIBLIOTECA</h3>
-            <h5>¿QUIERES AGREAGR UN LIBRO A BIBLIOTECA?</h5>
-            <p>En esta sección econtraras las acciones que puedes hacer con tu biblioteca</p>
-            <p>Si quieres agregar un libro oprime el siguiente botón
-            <a href="libro?action=agr-lib"><input class="buttons2" type="submit" name="" value="Agregar"></a>
-            </p>
-
-        </section>
     </main>
     <footer>
         <p>Creado por Michel Oriana Mateus Ayure</p>

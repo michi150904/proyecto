@@ -19,6 +19,15 @@
   <url-pattern>/usuario</url-pattern>
 </servlet-mapping>
 <servlet>
+  <servlet-name>controller.UsuarioWeb</servlet-name>
+  <servlet-class>controller.UsuarioWeb</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>controller.UsuarioWeb</servlet-name>
+  <url-pattern>/usuarioweb</url-pattern>
+</servlet-mapping>
+
+<servlet>
   <servlet-name>controller.Libro</servlet-name>
   <servlet-class>controller.Libro</servlet-class>
 </servlet>
@@ -26,4 +35,13 @@
   <servlet-name>controller.Libro</servlet-name>
   <url-pattern>/libro</url-pattern>
 </servlet-mapping>
+<servlet>
+  <servlet-name>controller.LibroWeb</servlet-name>
+  <servlet-class>controller.LibroWeb</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>controller.LibroWeb</servlet-name>
+  <url-pattern>/libroweb</url-pattern>
+</servlet-mapping>
+
 </web-app>

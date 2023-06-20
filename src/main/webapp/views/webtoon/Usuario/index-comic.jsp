@@ -20,8 +20,8 @@
             <a href="" class="enlace"></a>
             <img src="assets\webtoon\img\Naver_Line_Webtoon_logo.png" alt="" class="logo">
             <ul>
-                <li><a class="active" href="general?action=loginweb">Iniciar Sesión</a></li>
-                <li><a  href="general?action=formlogweb">Registrate</a></li>
+                <li><a class="active" href="usuarioweb?action=loginwe">Iniciar Sesión</a></li>
+                <li><a  href="usuarioweb?action=abrirForm">Registrate</a></li>
                 <li><a  href="general?action=inicioprin">Inicio</a></li>
             </ul>
         </nav>

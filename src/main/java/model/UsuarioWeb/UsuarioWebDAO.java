@@ -5,7 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.ConexionWeb;
-import model.Usuario.UsuarioVAO;
 
 public class UsuarioWebDAO {
         Connection con;

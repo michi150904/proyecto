@@ -28,7 +28,7 @@
     </header>
     <main>
         <section class="form-login2">
-            <form action="usuario" method="post">
+            <form action="Usuario" method="post">
                 <h5>FORMULARIO DE REGISTRO</h5>
                 <input class="controls" type="text" name="nombre" id="nombre" value="" placeholder="Nombres" required>
                 <input class="controls" type="text" name="apellido" id="apellido" value="" placeholder="Apellidos" required>

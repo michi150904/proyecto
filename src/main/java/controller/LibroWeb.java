@@ -8,15 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Libro.LibroDAO;
-import model.Libro.LibroVAO;
 import model.LibroWeb.LibroWebDAO;
 import model.LibroWeb.LibroWebVAO;
 
 public class LibroWeb extends HttpServlet {
 
-    LibroVAO l=new LibroVAO();
-    LibroDAO ld=new LibroDAO();
+    LibroWebVAO l=new LibroWebVAO();
+    LibroWebDAO ld=new LibroWebDAO();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("entro al doget");
@@ -45,13 +43,10 @@ public class LibroWeb extends HttpServlet {
         }
         }
         private void mostrar (HttpServletRequest req,HttpServletResponse resp){
-            LibroVAO m=new LibroVAO();
-            LibroDAO md=new LibroDAO();
+            LibroWebVAO m=new LibroWebVAO();
+            LibroWebDAO md=new LibroWebDAO();
             try{
-                List<LibroVAO>arrayLibro=md.Listar();
-                for (LibroVAO libroVAO : arrayLibro) {
-                    System.out.println(libroVAO.getId_Libro()+libroVAO.getNombre_Libro());
-                }
+                List<LibroWebVAO>arrayLibro=md.Listar();
                 req.setAttribute("libros",arrayLibro);
                 req.getRequestDispatcher("views/webtoon/Libro/comic-elimina.jsp").forward(req, resp);
                 System.out.println("Datos listados correctamente controlador");
@@ -80,7 +75,7 @@ public class LibroWeb extends HttpServlet {
     
         private void crear(HttpServletRequest req, HttpServletResponse resp){
             if(req.getParameter("nombrelib")!=null){
-                l.setNombre_Libro(req.getParameter("nombrelib"));
+                l.setNombreLibro(req.getParameter("nombrelib"));
             }
             if(req.getParameter("nombreaut")!=null){
                 l.setAutor(req.getParameter("nombreaut"));
@@ -92,7 +87,7 @@ public class LibroWeb extends HttpServlet {
                 l.setGenero(req.getParameter("genero"));
             }
             if(req.getParameter("fechapubli")!=null){
-                l.setFecha_Publicacion(req.getParameter("fechapubli"));
+                l.setFechaPublicacion(req.getParameter("fechapubli"));
             }
             if(req.getParameter("estado")!=null){
                 l.setEstado("Activo");
@@ -112,12 +107,12 @@ public class LibroWeb extends HttpServlet {
 
         private void eliminar (HttpServletRequest req,HttpServletResponse resp){
             if(req.getParameter("idlibro")!=null){
-                l.setId_Libro(Integer.parseInt(req.getParameter("idlibro")));
+                l.setIdLibro(Integer.parseInt(req.getParameter("idlibro")));
             }
             try {
-                ld.Eliminar(l.getId_Libro());
+                ld.Eliminar(l.getIdLibro());
                 req.setAttribute("proceso", true);
-                resp.sendRedirect("libro?action=lib-eli");
+                resp.sendRedirect("libroweb?action=lib-eli");
                 System.out.println("Se elimino el libro");
             }
             catch (Exception e){
@@ -128,10 +123,10 @@ public class LibroWeb extends HttpServlet {
         private void actualizar (HttpServletRequest req, HttpServletResponse resp){
             System.out.println(req.getParameter("idlib"));
             if(req.getParameter("idlib")!=null){
-                l.setId_Libro(Integer.parseInt(req.getParameter("idlib")));
+                l.setIdLibro(Integer.parseInt(req.getParameter("idlib")));
             }
             if(req.getParameter("nombrelib")!=null){
-                l.setNombre_Libro(req.getParameter("nombrelib"));
+                l.setNombreLibro(req.getParameter("nombrelib"));
             }
             if(req.getParameter("nombreaut")!=null){
                 l.setAutor(req.getParameter("nombreaut"));
@@ -143,7 +138,7 @@ public class LibroWeb extends HttpServlet {
                 l.setGenero(req.getParameter("genero"));
             }
             if(req.getParameter("fechapubli")!=null){
-                l.setFecha_Publicacion(req.getParameter("fechapubli"));
+                l.setFechaPublicacion(req.getParameter("fechapubli"));
             }
             if(req.getParameter("estado")!=null){
                 l.setEstado("Activo");
@@ -152,9 +147,9 @@ public class LibroWeb extends HttpServlet {
                 l.setEstado("Inactivo");
             }
             try{
-                ld.Actualizar(l.getId_Libro(), l.getNombre_Libro(),l.getAutor(),l.getCategoria(),l.getGenero(),l.getFecha_Publicacion(),l.getEstado());
+                ld.Actualizar(l.getIdLibro(), l.getNombreLibro(),l.getAutor(),l.getCategoria(),l.getGenero(),l.getFechaPublicacion(),l.getEstado());
                 req.setAttribute("proceso",true);
-                resp.sendRedirect("usuario?action=agr-dash");
+                resp.sendRedirect("usuarioweb?action=agr-dash");
                 System.out.println("Informacion actualizada comic");
             }
              catch (Exception e) {

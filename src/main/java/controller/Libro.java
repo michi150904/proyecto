@@ -45,9 +45,6 @@ public class Libro extends HttpServlet{
             LibroDAO md=new LibroDAO();
             try{
                 List<LibroVAO>arrayLibro=md.Listar();
-                for (LibroVAO libroVAO : arrayLibro) {
-                    System.out.println(libroVAO.getId_Libro()+libroVAO.getNombre_Libro());
-                }
                 req.setAttribute("libros",arrayLibro);
                 req.getRequestDispatcher("views/wattpad/Libro/libro-elimina.jsp").forward(req, resp);
                 System.out.println("Datos listados correctamente controlador");

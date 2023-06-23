@@ -80,3 +80,20 @@ main section p{
     float: right;
     border-radius: 6px;
 }
+.table{
+    width: 100%;
+    border: 1px solid #000;
+    background: #403129;
+}
+.td{
+    width: 25%;
+    text-align: center;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+    background: #403129;
+}
+caption {
+   padding: 0.3em;
+}

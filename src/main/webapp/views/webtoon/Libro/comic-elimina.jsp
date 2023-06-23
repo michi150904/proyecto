@@ -1,5 +1,8 @@
-<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -26,26 +29,30 @@
     </header>
     <main>
         <h3>Eliminar un comic</h3>
-        <h3>Mira primero que comic quieres eliminar</h3>
+        <section class="section">
+        <h5>Mira primero que comic quieres eliminar</h5>
+        <table class="table">
         <tr>
-            <th>Id del libro</th>
-            <th>Nombre Autor</th>
-            <th>Nombre Categoría</th>
-            <th>Género del libro</th>
-            <th>Fecha de publicación</th>
-            <th>Estado</th>
+            <th class="td">Id del libro</th>
+            <th class="td">Nombre Autor</th>
+            <th class="td">Nombre Categoría</th>
+            <th class="td">Género del libro</th>
+            <th class="td">Fecha de publicación</th>
+            <th class="td">Estado</th>
         </tr>
         <c:forEach var="libro" items="${libros}">
         <tr>
-            <td>${libro.getId_Libro()}</td>
-            <td>${libro.getNombre_Libro()}</td>
-            <td>${libro.getAutor()}</td>
-            <td>${libro.getCategoria()}</td>
-            <td>${libro.getGenero()}</td>
-            <td>${libro.getFecha_Publicacion()}</td>
-            <td>${libro.getEstado()}</td>
+            <td class="td">${libro.getIdLibro()}</td>
+            <td class="td">${libro.getNombreLibro()}</td>
+            <td class="td">${libro.getAutor()}</td>
+            <td class="td">${libro.getCategoria()}</td>
+            <td class="td">${libro.getGenero()}</td>
+            <td class="td">${libro.getFechaPublicacion()}</td>
+            <td class="td">${libro.getEstado()}</td>
         </tr>
     </c:forEach>
+</table>
+</section>
         <p>Llena el siguiente formulario para eliminar tu libro</p>
         <section class="section">
             <form action="libroweb" method="post" id="formEliminarLib">
@@ -54,6 +61,7 @@
                 <input type="submit" class="buttons" name="action" value="Eliminar">
             </form>
         </section>
+        <p>Si quieres volver oprime el siguiente botón
             <a href="general?action=dashweb"><input class="buttons2" type="submit" name="" value="Volver"></a>
         </p>
     </main>

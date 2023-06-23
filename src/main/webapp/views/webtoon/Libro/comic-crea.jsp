@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">

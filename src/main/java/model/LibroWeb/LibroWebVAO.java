@@ -1,42 +1,42 @@
 package model.LibroWeb;
 
 public class LibroWebVAO {
-    private int Id_Libro;
-    private String Nombre_Libro;
+    private int IdLibro;
+    private String NombreLibro;
     private String Autor;
     private String Categoria;
     private String Genero;
-    private String Fecha_Publicacion;
+    private String FechaPublicacion;
     private String Estado;
 
-    public LibroWebVAO(int id_Libro, String nombre_Libro, String autor, String categoria, String genero,
-            String fecha_Publicacion, String estado) {
-        Id_Libro = id_Libro;
-        Nombre_Libro = nombre_Libro;
+    public LibroWebVAO(int idLibro, String nombreLibro, String autor, String categoria, String genero,
+            String fechaPublicacion, String estado) {
+        IdLibro = idLibro;
+        NombreLibro = nombreLibro;
         Autor = autor;
         Categoria = categoria;
         Genero = genero;
-        Fecha_Publicacion = fecha_Publicacion;
+        FechaPublicacion = fechaPublicacion;
         Estado = estado;
     }
 
     public LibroWebVAO(){
     }
 
-    public int getId_Libro() {
-        return Id_Libro;
+    public int getIdLibro() {
+        return IdLibro;
     }
 
-    public void setId_Libro(int id_Libro) {
-        Id_Libro = id_Libro;
+    public void setIdLibro(int idLibro) {
+        IdLibro = idLibro;
     }
 
-    public String getNombre_Libro() {
-        return Nombre_Libro;
+    public String getNombreLibro() {
+        return NombreLibro;
     }
 
-    public void setNombre_Libro(String nombre_Libro) {
-        Nombre_Libro = nombre_Libro;
+    public void setNombreLibro(String nombreLibro) {
+        NombreLibro = nombreLibro;
     }
 
     public String getAutor() {
@@ -63,12 +63,12 @@ public class LibroWebVAO {
         Genero = genero;
     }
 
-    public String getFecha_Publicacion() {
-        return Fecha_Publicacion;
+    public String getFechaPublicacion() {
+        return FechaPublicacion;
     }
 
-    public void setFecha_Publicacion(String fecha_Publicacion) {
-        Fecha_Publicacion = fecha_Publicacion;
+    public void setFechaPublicacion(String fechaPublicacion) {
+        FechaPublicacion = fechaPublicacion;
     }
 
     public String getEstado() {
@@ -78,5 +78,6 @@ public class LibroWebVAO {
     public void setEstado(String estado) {
         Estado = estado;
     }
+
 
 }

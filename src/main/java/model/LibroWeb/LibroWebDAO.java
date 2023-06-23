@@ -18,16 +18,16 @@ public class LibroWebDAO {
         try {
             con=ConexionWeb.conectar();
             ps=con.prepareStatement(sql);
-            ps.setString(1,libro.getNombre_Libro());
+            ps.setString(1,libro.getNombreLibro());
             ps.setString(2,libro.getAutor());
             ps.setString(3,libro.getCategoria());
             ps.setString(4,libro.getGenero());
-            ps.setString(5,libro.getFecha_Publicacion());
+            ps.setString(5,libro.getFechaPublicacion());
             ps.setString(6,libro.getEstado());
             System.out.println(ps);
             ps.executeUpdate();
             ps.close();
-            System.out.println("se creo un libro correctamente dao");
+            System.out.println("se creo un comic correctamente dao ");
         }
         catch(Exception e){
             System.out.println("error al crear libro"+e.getMessage().toString());
@@ -38,8 +38,8 @@ public class LibroWebDAO {
         return r;
     }
 
-    public void Eliminar (int Id_Libro )throws SQLException{
-        sql="delete from libro where Id_Libro="+Id_Libro;
+    public void Eliminar (int IdLibro )throws SQLException{
+        sql="delete from libro where Id_Libro="+IdLibro;
         try {
             con=ConexionWeb.conectar();
             ps=con.prepareStatement(sql);
@@ -82,12 +82,12 @@ public class LibroWebDAO {
             rs=ps.executeQuery(sql);
             while (rs.next()) {
                 LibroWebVAO row= new LibroWebVAO();
-                row.setId_Libro(rs.getInt("Id_Libro"));
-                row.setNombre_Libro(rs.getString("Nombre_Libro"));
+                row.setIdLibro(rs.getInt("Id_Libro"));
+                row.setNombreLibro(rs.getString("Nombre_Libro"));
                 row.setAutor(rs.getString("Nombre_Autor"));
                 row.setCategoria(rs.getString("Categoria"));
                 row.setGenero(rs.getString("Genero"));
-                row.setFecha_Publicacion(rs.getString("Fecha_Publicacion"));
+                row.setFechaPublicacion(rs.getString("Fecha_Publicacion"));
                 row.setEstado(rs.getString("Estado_Libro"));
                 ListarLibros.add(row);
             }
